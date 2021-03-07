@@ -45,7 +45,7 @@ class _FeedPageState extends State<FeedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("MWN Flutter")),
+        appBar: AppBar(title: Text("Minimal World News")),
         body: SafeArea(
           child: items.length > 0
               ? ListView.builder(
