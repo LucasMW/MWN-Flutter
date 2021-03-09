@@ -31,7 +31,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
-    print("calling junk");
     final api = API();
     api.getNewsFeed().then((value) {
       print(value.author.name);

@@ -28,7 +28,7 @@ class NewsFeed {
     author =
         json['author'] != null ? new Author.fromJson(json['author']) : null;
     if (json['items'] != null) {
-      items = new List<Item>();
+      items = [];
       json['items'].forEach((v) {
         items.add(new Item.fromJson(v));
       });
