@@ -23,19 +23,35 @@ class _DetailPageState extends State<DetailPage> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(child: Text(widget.item.title)),
+              Container(
+                  child: Text(
+                widget.item.title,
+                style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+              )),
               Image.network(widget.item.image),
               Container(child: Text(widget.item.description)),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   TextButton(
+                      style: TextButton.styleFrom(
+                        primary: Colors.white,
+                        backgroundColor: Colors.deepOrange,
+                        elevation: 1,
+                      ),
                       onPressed: () {
                         print("Go to page");
                         _launchURL(widget.item.id);
                       },
                       child: Text("go to web page")),
                   TextButton(
+                      style: TextButton.styleFrom(
+                        primary: Colors.white,
+                        backgroundColor: Colors.deepOrange,
+                        elevation: 1,
+                      ),
                       onPressed: () {
                         print("xxx");
                         Share.share('${widget.item.id}}',
